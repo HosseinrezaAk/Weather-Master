@@ -6,7 +6,12 @@
 </h1>
 
 ## About The Project
-  Weather-Master is a Node server that implemented with `Express.js` and it will show you the real-time weather and discription using real-time api.
+  Weather-Master is a Node server that implemented with `Express.js` and it will show you the real-time with using real-time weather Api :
+  - weather temprature 
+  - weather discription
+  - weather specific icon 
+  
+    
 ## RUN
 
 - Clone the project.
