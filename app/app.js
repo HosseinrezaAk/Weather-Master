@@ -6,8 +6,10 @@ const https = require("https");
 const app = express();
 
 app.get("/", function( req, res){
-
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&appid=40d5fe1720ee3ca82704129f2af71f0b#";
+    const query = "Paris";
+    const apiKey = "40d5fe1720ee3ca82704129f2af71f0b#";
+    const unit = "metric"
+    const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&units="+ unit +"&appid="+ apiKey;
     //fetch Data From external server 
     https.get( url, function(response){ 
         response.on("data", function(data){
