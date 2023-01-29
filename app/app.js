@@ -6,11 +6,15 @@ const https = require("https");
 const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
-    
+
 app.get("/", function( req, res){
-   
+   res.sendFile(__dirname +"/index.html");
 
 });
+
+app.post("/", function( req, res){
+    console.log(req.body.cityName);
+})
 
 // const query = "Paris";
 // const apiKey = "40d5fe1720ee3ca82704129f2af71f0b#";
