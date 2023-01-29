@@ -31,9 +31,11 @@ app.post("/", function( req, res){
             const imgUrl = "https://openweathermap.org/img/wn/"+ iconID +"@2x.png";
             
             res.write("<h1>" + cityName + "</h1>");
+            
             res.write("<p>the weather description  is: " + weatherDescription + ".</p>");
+            res.write("<p>Weather icon is :</p><img src="+ imgUrl +  ">");
             res.write("<h2> the temprature is : "+ temp + " degrees Celcius.</h2>");
-            res.write("<img src="+ imgUrl +  ">");
+            
             res.send(); // you can have only 1 res.send in each get method
 
         });
